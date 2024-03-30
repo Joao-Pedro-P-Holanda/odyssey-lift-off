@@ -1,5 +1,23 @@
 import React from "react";
 import { Layout } from "../components";
+import { gql } from "../__generated__";
+
+/* client query */
+const TRACKS = gql(`
+  query GetTracks {
+    tracksForHome {
+      id
+      title
+      thumbnail
+      length
+      modulesCount
+      author {
+        id
+        name
+        photo
+      }
+    }
+  }`)
 
 /**
  * Tracks Page is the Catstronauts home page.
