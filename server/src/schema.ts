@@ -9,7 +9,7 @@ export const typeDefs = gql`
   }
 
   type Mutation {
-    incrementTrackViews(id: ID!): IncrementedTrackViewsResponse
+    incrementTrackViews(id: ID!): IncrementTrackViewsResponse
   }
 
   type IncrementTrackViewsResponse {
