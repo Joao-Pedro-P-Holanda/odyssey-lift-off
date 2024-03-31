@@ -4,6 +4,8 @@ export const typeDefs = gql`
   type Query {
     "Non-null list of non-null tracks"
     tracksForHome: [Track!]!
+    "A single track"
+    track(id: ID!): Track
   }
 
   "A track is a group of Modules that teaches about a specific topic"
