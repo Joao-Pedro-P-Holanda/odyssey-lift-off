@@ -17,6 +17,11 @@ export const typeDefs = gql`
     "time in minutes"
     length: Int
     modulesCount: Int
+    "The track's complete array of Modules"
+    modules: [Module!]!
+    "Complete description, accepts markdown format"
+    description: String
+    numberOfViews: Int
   }
 
   "Author of a complete Track or a Module"
@@ -25,5 +30,14 @@ export const typeDefs = gql`
     name: String!
     "src of the profile pic"
     photo: String
+  }
+
+  "A Module is a single unit of teaching. Multiple Modules compose a Track"
+  type Module {
+    id: ID!
+    "The Module's title"
+    title: String!
+    "The Module's length in minutes"
+    length: Int
   }
 `;
