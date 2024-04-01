@@ -14,7 +14,7 @@ export const typeDefs = gql`
 
   type IncrementTrackViewsResponse {
     code: Int!
-    sucess: Boolean!
+    success: Boolean!
     response: String!
     track: Track
   }
